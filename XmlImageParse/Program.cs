@@ -1,15 +1,26 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
+using System.Xml;
 using System;
 using System.IO;
 public class Program
 {
+
     internal static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-        //string path = @"\XMLParse\XMLSources\myConfig.xml";
-        XElement xmlFromFile = XElement.Load(Path.GetFullPath(@"B:\Repos\rekk88\XmlImageParse\XmlImageParse\XMLParse\XMLSources\myConfig.xml"));
-        Console.WriteLine(xmlFromFile);
-        //System.IO.DirectoryNotFoundException: 'Could not find a part of the path 'B:\XMLParse\XMLSources\myConfig.xml'.'
+        string dir = Directory.GetCurrentDirectory() + @"\XMLParse\XMLSources\myConfig.xml";
+        XElement xmlFromFile = XElement.Load(dir);
+        Console.WriteLine(XElement.Parse((string)xmlFromFile));
+        
+        // Console.WriteLine(xmlFromFile); //check file
+        // XmlTextReader reader = new XmlTextReader(dir);
+        // reader.WhitespaceHandling = WhitespaceHandling.None;
+        // while (reader.Read())
+        // {
+        //     Console.WriteLine(reader.Name);
+        //     Console.WriteLine(reader.ValueType);
+        //     Console.WriteLine("value : ",reader.Value);
+        // }
+
     }
 }

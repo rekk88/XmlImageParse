@@ -37,4 +37,7 @@ public class Program
     }
 }
 
+
+
+//https://www.c-sharpcorner.com/UploadFile/mahesh/reading-xml-in-ado-net/
 //"B:\\Repos\\rekk88\\XmlImageParse\\XmlImageParse\\bin\\Debug\\net6.0\\XMLParse\\XMLSources\\myConfig.xml"

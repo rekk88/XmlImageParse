@@ -15,7 +15,6 @@ namespace XmlImageParse.XMLParse.Helpers
             {
                 dir = dir.Substring(0, dir.IndexOf("bin"));
             }
-            Console.WriteLine(dir);
             return dir;
         }
     }
